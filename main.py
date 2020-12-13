@@ -29,9 +29,9 @@ urls = {
         'valid_data': {
             '% Change': '% Change',
             'Bonus Share': '% Bonus',
-            'Bonuse Distribution Date': 'Bonus Distribution Date',
+            # 'Bonuse Distribution Date': 'Bonus Distribution Date',
             'Cash Dividend': '% Dividend',
-            'Day TurnOver': 'Day TurnOver',
+            # 'Day TurnOver': 'Day TurnOver',
             'Market Capitalization (Rs.)': 'Market Capitalization',
             'Total Listed Shares': 'Total Listed Shares',
             'Total Paid Up Value': 'Total Paid Up Value',
@@ -45,7 +45,7 @@ urls = {
         'valid_data': {
             'Shares Outstanding': 'Total Listed Shares',
             'Market Price': 'Last Trade Price',
-            '% Change': '% change',
+            '% Change': '% Change',
             'Book Value': 'Paid Up Values',
             '% Dividend': '% Dividend',
             '% Bonus': '% Bonus',
@@ -146,7 +146,7 @@ class Extractor:
 
     def get_company_name(self, company_name):
         if 'number' in self.regex:
-            return OPTIONS.get(company_name)
+            return OPTIONS.get(company_name.upper())
         return company_name
 
     def connect(self, company_name):
